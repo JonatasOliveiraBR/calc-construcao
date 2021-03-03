@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de tijolos</title>
+</head>
+<body>
+    <header>
+        <h1>Quantidade de Tijolos</h1>
+    </header>
 
+    <div>
+        <div class="ambiente">
+            <p>Medidas da parede</p>
+            <label for="alt">Altura (m): </label><input type="number" name="txtAlt" id="txtAlt" min="1"><br><br>
+            <label for="comp">Comp. (m): </label><input type="number" name="txtComp" id="txtComp" min="1"><br><br>
+
+            <form action="">
+                <input type="checkbox" name="checkbox" id="checkBox" onclick="liberaBox()">
+                <label for="lblCheck">Parede possui porta/janela</label>
+
+                <div id="portaJanela" style="display: none;">
+                    <p>Medidas da porta/janela</p>
+                    <label for="altP">Altura (m): </label><input type="number" name="txtAltP" id="txtAltP" min="1"><br><br>
+                    <label for="comp">Comp. (m): </label><input type="number" name="txtCompP" id="txtCompP" min="1"><br><br>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+        <div class="tijolo">
+            <p>Medidas do tijolo</p>
+            <label for="alt">Altura (cm): </label><input type="number" name="txtAltT" id="txtAltT" min="1"><br><br>
+            <label for="comp">Comp. (cm): </label><input type="number" name="txtCompT" id="txtCompT" min="1"><br><br>
+        </div>
+    </div>
+        
+    <input type="button" value="Calcular" onclick="calcularTijolo()">
+
+    <div class="saida">
+        <div id="resultado"></div>
+
+    </div>
+
+    
+
+    <p><a href="index.html">Voltar</a></p>
+    <footer>
+        <p>Desenvolvido por Jonatas Oliveira</p>
+        <p>GitHub: <a href="https://github.com/JonatasOliveiraBR" target="_blank">JonatasOliveiraBR</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
