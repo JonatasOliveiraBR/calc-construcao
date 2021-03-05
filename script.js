@@ -35,7 +35,7 @@ function calcularPiso(){
         window.alert('Atenção - existem campos vazios!')
     }else{
         let area = comp * larg
-        let aPiso = area(compPiso,largPiso)
+        let aPiso = fArea(compPiso,largPiso)
         let qPiso = area / aPiso
     
     
@@ -45,7 +45,7 @@ function calcularPiso(){
 
         saida.innerHTML += `<h3>Margem + 10%: ${(qPiso*0.1)+qPiso} pisos<h3>`
 
-        limparTxt()
+        limparTxtPiso()
     }  
 }
 
