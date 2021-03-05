@@ -2,7 +2,6 @@ function fArea(a,b){
     return (a/100)*(b/100)
 }
 
-
 function limparSaida(){
     document.getElementById('resultado').innerHTML = ''
 }
@@ -84,7 +83,7 @@ function calcularTijolo(){
 
 }
 
-function liberaBox(){
+/*function liberaBox(){
     let box = document.getElementById('checkBox')
     let portaJanela = document.getElementById('portaJanela')
     let altPJ = Number(document.getElementById('txtAltP').value)
@@ -97,7 +96,7 @@ function liberaBox(){
     }
 }
 
-    /*
+
     let altPJ = Number(document.getElementById('txtAltP').value)
     let compPJ = Number(document.getElementById('txtCompP').value)
     let areaPJ = altPJ * compPJ 
