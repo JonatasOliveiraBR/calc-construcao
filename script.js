@@ -18,6 +18,8 @@ function limparTxtTijolo(){
     document.getElementById('txtComp').value = ''
     document.getElementById('txtAltT').value = ''
     document.getElementById('txtCompT').value = ''
+    document.getElementById('txtAltP').value = ''
+    document.getElementById('txtCompP').value = ''
 }
 
 
@@ -55,39 +57,35 @@ function calcularTijolo(){
     let altT = Number(document.getElementById('txtAltT').value)
     let compT = Number(document.getElementById('txtCompT').value)
     let saida = document.getElementById('resultado')
+    let box = document.getElementById('checkBox')
 
     if(alt==''||comp==''||altT==''||compT==''){
         window.alert('Atenção - existem campos vazios!')
     }else {
         let area = alt * comp
+
+        if (box.checked === true){
+            let altPJ = Number(document.getElementById('txtAltP').value)
+            let compPJ = Number(document.getElementById('txtCompP').value)
+            let areaPJ = altPJ * compPJ 
+            area -= areaPJ
+        }
+
         let aTijolo = fArea(compT,altT)
         let qTijolo = area / aTijolo
 
-        
-        saida.innerHTML += `Área do muro: ${area}m<sup>2</sup><br>`
+        saida.innerHTML += `Área da parede: ${area.toFixed(2)}m<sup>2</sup><br>`
         saida.innerHTML += `Medidas do tijolo: ${altT} x ${compT}<br>`
         saida.innerHTML += `<strong>Qtd tijolos: ${qTijolo.toFixed(0)}<strong>`
 
         limparTxtTijolo()
     }  
-    
-    
-
-
-    
-
-   
-
-    
-
 
 }
 
-/*function liberaBox(){
+function liberaBox(){
     let box = document.getElementById('checkBox')
     let portaJanela = document.getElementById('portaJanela')
-    let altPJ = Number(document.getElementById('txtAltP').value)
-    let compPJ = Number(document.getElementById('txtCompP').value)
 
     if(box.checked == true){
         portaJanela.style.display = 'block'
@@ -96,10 +94,4 @@ function calcularTijolo(){
     }
 }
 
-
-    let altPJ = Number(document.getElementById('txtAltP').value)
-    let compPJ = Number(document.getElementById('txtCompP').value)
-    let areaPJ = altPJ * compPJ 
-    alert(areaPJ)
-    */
 
