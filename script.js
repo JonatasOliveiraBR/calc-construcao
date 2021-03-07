@@ -6,6 +6,7 @@ function limparSaida(){
     document.getElementById('resultado').innerHTML = ''
 }
 
+
 function limparTxtPiso(){
     document.getElementById('txtComp').value = ''
     document.getElementById('txtLarg').value = ''
@@ -21,6 +22,15 @@ function limparTxtTijolo(){
     document.getElementById('txtAltP').value = ''
     document.getElementById('txtCompP').value = ''
 }
+
+function limparTxtTelha(){
+    document.getElementById('txtComp').value = ''
+    document.getElementById('txtLarg').value = ''
+    document.getElementById('txtTelha').value = ''
+}
+
+
+
 
 function liberaBox(){
     let box = document.getElementById('checkBox')
@@ -94,6 +104,7 @@ function calcularTijolo(){
 }
 
 function calcularTelha(){
+    limparSaida()
     let comp = Number(document.getElementById('txtComp').value)
     let larg = Number(document.getElementById('txtLarg').value)
     let inclinacao = Number(document.getElementById('select').value)
@@ -101,19 +112,19 @@ function calcularTelha(){
     let telha = Number(document.getElementById('txtTelha').value)
     let saida = document.getElementById('resultado')
 
+    if (comp == '' || larg == '' || telha == ''){
+        window.alert('Atenção - existem campos vazios!')    
+    }else{
+        let area = (comp*larg)*inclinacao
 
-    let area = (comp*larg)*inclinacao
-
-    if(rdDuasAgua.checked === true){
-        area *= 2
-    }   
-
-    let qTelha = area * telha
-
-    saida.innerHTML += `Área inclinada: ${area} m<sup>2</sup><br>`
-    saida.innerHTML += `Quantidade: ${qTelha.toFixed(0)} telhas<br>`
-    saida.innerHTML += `Acréscimo das perdas + 5%: ${(qTelha*1.05).toFixed(0)} telhas`
-
+        if(rdDuasAgua.checked == true){
+            area *= 2
+        }   
+        let qTelha = area * telha
+        saida.innerHTML += `Área c/ correção: ${area.toFixed(2)} m<sup>2</sup><br>`
+        saida.innerHTML += `Total c/ + 5% perdas: ${(qTelha*1.05).toFixed(0)} telhas`
+        limparTxtTelha()
+    }
 }
 
 
