@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Cálculo do piso</title>
+    <title>Cálculo do telhas</title>
 </head>
 <body>
     <header>
-        <h1>Quantidade de piso</h1>
+        <h1>Quantidade de telhas</h1>
     </header>
 
     <div>
@@ -19,28 +19,42 @@
             <p>Medidas do ambiente</p>
             <label for="comp">Comprimento (m): </label><input type="number" name="txtComp" id="txtComp" min="1"><br><br>
             <label for="larg">Largura (m): </label><input type="number" name="txtLarg" id="txtLarg" min="1"><br><br>
+            <hr>
+            <p>Fator de correção da inclinação</p>
+            <label for="">Inclinação: </label>
+            <select id="select">
+                <option value="1.044">30%</option>
+                <option value="1.059">35%</option>
+                <option value="1.077">40%</option>
+                <option value="1.097">45%</option>
+                <option value="1.118">50%</option>
+            </select>
+            <hr>
+            <form action="">
+                <p>Tipo telhado</p>
+                <input type="radio" name="radio" id="umaAgua" value="umaAgua">
+                <label for="umaAgua">1 água</label><br>
+                <input type="radio" name="radio" id="duasAgua" value="duasAgua">
+                <label for="umaAgua">2 águas</label>
+            </form>    
+        
         </div>
+
         <hr>
-        <div class="piso">
-            <p>Medidas do piso</p>
-            <label for="comp">Comprimento (cm): </label><input type="number" name="txtCompPiso" id="txtCompPiso" min="1"><br><br>
-            <label for="larg">Largura (cm): </label><input type="number" name="txtLargPiso" id="txtLargPiso" min="1"><br><br>
+        <div class="telha">
+            Consumo de telhas m<sup>2</sup>:
+            <input type="number" name="txtTelha" id="txtTelha">
+            
         </div>
         <hr>
     </div>
         
 
-    <input type="button" value="Calcular" onclick="calcularPiso()">
+    <input type="button" value="Calcular" onclick="calcularTelha()">
 
     <div class="saida">
         <div id="resultado"></div>
-
     </div>
-
-
-
-
-
 
 
     <p><a href="index.html">Voltar</a></p>
@@ -48,7 +62,8 @@
         <p>Desenvolvido por Jonatas Oliveira</br>
         GitHub: <a href="https://github.com/jonataswd" target="_blank">jonataswd</a></p>
     </footer>
-    
     <script src="script.js"></script>
+
+        
 </body>
 </html>

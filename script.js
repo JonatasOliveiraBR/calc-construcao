@@ -22,6 +22,17 @@ function limparTxtTijolo(){
     document.getElementById('txtCompP').value = ''
 }
 
+function liberaBox(){
+    let box = document.getElementById('checkBox')
+    let portaJanela = document.getElementById('portaJanela')
+
+    if(box.checked == true){
+        portaJanela.style.display = 'block'
+    }else{
+        portaJanela.style.display = 'none'
+    }
+}
+
 
 function calcularPiso(){
     limparSaida()
@@ -79,19 +90,31 @@ function calcularTijolo(){
         saida.innerHTML += `<strong>Qtd tijolos: ${qTijolo.toFixed(0)}<strong>`
 
         limparTxtTijolo()
-    }  
+    } 
+}
+
+function calcularTelha(){
+    let comp = Number(document.getElementById('txtComp').value)
+    let larg = Number(document.getElementById('txtLarg').value)
+    let inclinacao = Number(document.getElementById('select').value)
+    let rdDuasAgua = document.getElementById('duasAgua')
+    let telha = Number(document.getElementById('txtTelha').value)
+    let saida = document.getElementById('resultado')
+
+
+    let area = (comp*larg)*inclinacao
+
+    if(rdDuasAgua.checked === true){
+        area *= 2
+    }   
+
+    let qTelha = area * telha
+
+    saida.innerHTML += `Área inclinada: ${area} m<sup>2</sup><br>`
+    saida.innerHTML += `Quantidade: ${qTelha.toFixed(0)} telhas<br>`
+    saida.innerHTML += `Acréscimo das perdas + 5%: ${(qTelha*1.05).toFixed(0)} telhas`
 
 }
 
-function liberaBox(){
-    let box = document.getElementById('checkBox')
-    let portaJanela = document.getElementById('portaJanela')
-
-    if(box.checked == true){
-        portaJanela.style.display = 'block'
-    }else{
-        portaJanela.style.display = 'none'
-    }
-}
 
 
