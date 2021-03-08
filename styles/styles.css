@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
+body{
+    background-color: #2C2C32;
+    color: black;   
+    text-align: center;
+    color: white;
+}
+header{
+    margin-bottom: 20px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ambiente p{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.ambiente{
+    background-color: white;
+    color: black;
+    width: 20%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.piso{
+    background-color: white;
+    color: black;
+    width: 20%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+a {
+    color: white;
+}
+
+input{
+    width: 100px;
+}
+
+.button{
+    padding: 15px;
+    background-color: #0066B8;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 120px;
+    text-align: center;
+}
+
+.voltar{
+    display: inline-block;
+    background-color: #0066B8;
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+}

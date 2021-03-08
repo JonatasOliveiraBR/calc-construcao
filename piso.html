@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Cálculo do piso</title>
 </head>
 <body>
@@ -14,23 +14,23 @@
         <h1>Quantidade de piso</h1>
     </header>
 
-    <div>
+    <main>
         <div class="ambiente">
             <p>Medidas do ambiente</p>
             <label for="comp">Comprimento (m): </label><input type="number" name="txtComp" id="txtComp" min="1"><br><br>
             <label for="larg">Largura (m): </label><input type="number" name="txtLarg" id="txtLarg" min="1"><br><br>
         </div>
-        <hr>
+        
         <div class="piso">
             <p>Medidas do piso</p>
             <label for="comp">Comprimento (cm): </label><input type="number" name="txtCompPiso" id="txtCompPiso" min="1"><br><br>
             <label for="larg">Largura (cm): </label><input type="number" name="txtLargPiso" id="txtLargPiso" min="1"><br><br>
         </div>
-        <hr>
-    </div>
+        
+    </main>
         
 
-    <input type="button" value="Calcular" onclick="calcularPiso()">
+    <input class="button" type="button" value="Calcular" onclick="calcularPiso()">
 
     <div class="saida">
         <div id="resultado"></div>
@@ -43,10 +43,10 @@
 
 
 
-    <p><a href="index.html">Voltar</a></p>
+    <p><a class="voltar" href="index.html">Voltar</a></p>
     <footer>
         <p>Desenvolvido por Jonatas Oliveira</br>
-        GitHub: <a href="https://github.com/jonataswd" target="_blank">jonataswd</a></p>
+        <a href="https://github.com/jonataswd" target="_blank">GitHub</a></p>
     </footer>
     
     <script src="script.js"></script>
