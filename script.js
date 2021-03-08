@@ -30,14 +30,12 @@ function limparTxtTelha(){
 }
 
 
-
-
 function liberaBox(){
     let box = document.getElementById('checkBox')
     let portaJanela = document.getElementById('portaJanela')
 
     if(box.checked == true){
-        portaJanela.style.display = 'block'
+        portaJanela.style.display = 'flex'
     }else{
         portaJanela.style.display = 'none'
     }
@@ -63,10 +61,7 @@ function calcularPiso(){
     
         saida.innerHTML += `Área do ambiente: ${area} m<sup>2<sup><br>`
         saida.innerHTML += `Medida do piso: ${compPiso}cm x ${largPiso}cm<br>`
-        saida.innerHTML += `<strong>Qtd: ${qPiso.toFixed(0)} pisos<s/trong>`
-
-        saida.innerHTML += `<h3>Margem + 10%: ${(qPiso*0.1)+qPiso} pisos<h3>`
-
+        saida.innerHTML += `<strong>Total c/ + 5% perdas: ${qPiso.toFixed(0)} pisos<s/trong>`
         limparTxtPiso()
     }  
 }
@@ -98,7 +93,6 @@ function calcularTijolo(){
         saida.innerHTML += `Área da parede: ${area.toFixed(2)}m<sup>2</sup><br>`
         saida.innerHTML += `Medidas do tijolo: ${altT} x ${compT}<br>`
         saida.innerHTML += `<strong>Qtd tijolos: ${qTijolo.toFixed(0)}<strong>`
-
         limparTxtTijolo()
     } 
 }
@@ -122,7 +116,7 @@ function calcularTelha(){
         }   
         let qTelha = area * telha
         saida.innerHTML += `Área c/ correção: ${area.toFixed(2)} m<sup>2</sup><br>`
-        saida.innerHTML += `Total c/ + 5% perdas: ${(qTelha*1.05).toFixed(0)} telhas`
+        saida.innerHTML += `<strong>Total c/ + 5% perdas: ${(qTelha*1.05).toFixed(0)} telhas</strong>`
         limparTxtTelha()
     }
 }

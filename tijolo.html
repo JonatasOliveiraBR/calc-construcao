@@ -6,42 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Calculo de tijolos</title>
 </head>
 <body>
     <header>
-        <h1>Quantidade de Tijolos</h1>
+        <h1>CÁLCULO DE TIJOLOS</h1>
     </header>
 
-    <div>
+    <main>
         <div class="ambiente">
             <p>Medidas da parede</p>
             <label for="alt">Altura (m): </label><input type="number" name="txtAlt" id="txtAlt" min="1"><br><br>
             <label for="comp">Comp. (m): </label><input type="number" name="txtComp" id="txtComp" min="1"><br><br>
 
-            <form action="">
-                <input type="checkbox" name="checkbox" id="checkBox" onclick="liberaBox()">
-                <label for="lblCheck">Parede possui porta/janela</label>
+            
+            <input onload="limpaBox()" type="checkbox" name="checkbox" id="checkBox" onclick="liberaBox()">
+            <label for="lblCheck">Possui porta/janela</label>
 
-                <div id="portaJanela" style="display: none;">
-                    <p>Medidas da porta/janela</p>
-                    <label for="altP">Altura (m): </label><input type="number" name="txtAltP" id="txtAltP" min="1"><br><br>
-                    <label for="comp">Comp. (m): </label><input type="number" name="txtCompP" id="txtCompP" min="1"><br><br>
-                </div>
-            </form>
+            <div id="portaJanela" style="display: none; margin-top: 5px;">
+                <label for="altP">Alt(m): </label><input type="number" name="txtAltP" id="txtAltP" min="1"><br><br>
+                <label for="comp">Comp(m): </label><input type="number" name="txtCompP" id="txtCompP" min="1"><br><br>
+            </div>
         </div>
 
-        <hr>
+        
         <div class="tijolo">
             <p>Medidas do tijolo</p>
             <label for="alt">Altura (cm): </label><input type="number" name="txtAltT" id="txtAltT" min="1"><br><br>
             <label for="comp">Comp. (cm): </label><input type="number" name="txtCompT" id="txtCompT" min="1"><br><br>
         </div>
-        <hr>
-    </div>
+      
+    </main>
         
-    <input type="button" value="Calcular" onclick="calcularTijolo()">
+    <input class="button" type="button" value="Calcular" onclick="calcularTijolo()">
 
     <div class="saida">
         <div id="resultado"></div>
@@ -50,8 +48,9 @@
 
     
 
-    <p><a href="index.html">Voltar</a></p>
+    
     <footer>
+        <p><a class="voltar" href="index.html">Voltar</a></p>
         <p>Desenvolvido por Jonatas Oliveira</br>
         GitHub: <a href="https://github.com/jonataswd" target="_blank">jonataswd</a></p>
     </footer>

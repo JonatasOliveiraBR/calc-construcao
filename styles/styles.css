@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     font-family:"Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
 }
 
@@ -15,43 +14,86 @@ body{
     color: white;
 }
 header{
-    margin-bottom: 20px;
+    margin: 10px 5px 20px 5px;
 }
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .ambiente p{
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 .ambiente{
     background-color: white;
     color: black;
-    width: 20%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    width: 80%;
+    height: auto;
     margin-bottom: 10px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+#checkBox{
+    width: 20px;
+}
+
+#portaJanela input{
+    width: 60px;
+}
+
+#portaJanela{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.piso p{
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .piso{
     background-color: white;
     color: black;
-    width: 20%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
+.tijolo p{
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.tijolo{
+    background-color: white;
+    color: black;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#tipoTelhado{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
+
+#tipoTelhado input{
+    width: 15px;
+}
+#select{
+    margin-bottom: 5px;
+}
 a {
     color: white;
 }
@@ -61,7 +103,7 @@ input{
 }
 
 .button{
-    padding: 15px;
+    padding: 10px;
     background-color: #0066B8;
     color: white;
     border: none;
@@ -76,6 +118,22 @@ input{
     display: inline-block;
     background-color: #0066B8;
     width: 80px;
-    height: 30px;
-    padding: 5px;
+    height: 25px;
+    padding: 4px;
+    font-weight: 600;
+}
+
+
+
+footer{
+    color: white;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
